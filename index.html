@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>vector=[0];	var i=0;</script>
+	<title>PUNTO #2</title>
+</head>
+<body>
+
+
+	<div id="mensaje" class="mensaje"><center>
+		<h1>Ingrese 5 numeros</h1><br>
+		<input type="text" name="vector" id="vector" class="vector" placeholder="introduzca un numero">
+<input type="button" name="boton" onclick="ingresar();">
+<br>
+<h1>Presione el boton si desea ver el <br>numero ingresado mayor</h1><br>
+<input type="text" name="vector2" id="vector2" class="vector2" placeholder="">
+<input type="button" name="boton" onclick="presione();">
+</center></div>
+
+	<script>
+
+function ingresar(){
+
+
+	var numero=document.getElementById('vector').value;
+	var cuadro=document.getElementById('mensaje');
+
+
+
+	vectorl=vector.length;
+
+
+	if(vectorl<=5)
+	{
+		vector.push(numero);
+			console.log(vector);
+			
+			numero.value="";
+	}
+else
+{
+	alert("El vector es solo de 5 posiciones");
+}
+
+}
+
+function presione(){
+
+var numerom=0;
+
+	for (i=0; i<=5;i++) 
+	{
+		if(vector[i]>numerom)
+		{
+		numerom=vector[i];		
+		}
+	 }
+	
+ console.log(numerom);
+ vector2.value=numerom;
+
+	}
+	</script>
+
+
+
+</body>
+</html>
+
+<style type="text/css">
+
+	.mensaje{
+		position: absolute;
+		background-color: red;
+		left: 30%;
+		width:40%;
+		height:40%;
+		top:5%;
+		font-size: 70%;
+		color: white;
+		border: solid black 3px;
+		font-family: impact;
+	}
+
